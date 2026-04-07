@@ -8,54 +8,57 @@ import {
   Sprout,
   TrendingUp,
 } from "lucide-react";
+import maisResultadoPorHectareImage from "../assets/mais-resultado-por-hectare.jpg";
+import decisoesTecnicasImage from "../assets/decisoes-tecnicas.jpeg";
+import acompanhamentoTecnicoImage from "../assets/acompanhamento-tecnico.jpg";
 
 const benefits = [
   {
     id: "01",
-    title: "Mais produtividade por area",
+    title: "Mais resultado por hectare",
     description:
-      "Melhore o aproveitamento da pastagem e aumente o desempenho da operacao com planejamento tecnico.",
+      "Com orientação técnica aplicada à sua realidade, sua área produz melhor, com uso mais eficiente dos recursos e foco em rentabilidade.",
     Icon: TrendingUp,
-    image:
-      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: maisResultadoPorHectareImage,
+    imagePosition: "center center",
   },
   {
     id: "02",
-    title: "Reducao de perdas e desperdicios",
+    title: "Menos perdas, mais aproveitamento",
     description:
-      "Identifique falhas de manejo, uso ineficiente de recursos e pontos que comprometem a rentabilidade.",
+      "Reduza desperdícios no manejo, corrija gargalos da operação e aproveite melhor pasto, insumos e estrutura disponível.",
     Icon: BarChart3,
   },
   {
     id: "03",
-    title: "Decisoes mais seguras no campo",
+    title: "Decisões técnicas com mais segurança",
     description:
-      "Tenha orientacao tecnica para planejar, corrigir e conduzir a producao com mais clareza.",
+      "Tenha mais clareza para decidir no campo com base em análise técnica, experiência prática e planejamento da propriedade.",
     Icon: ShieldCheck,
-    image:
-      "https://images.unsplash.com/photo-1589923158776-cb4485d99fd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: decisoesTecnicasImage,
+    imagePosition: "center center",
   },
   {
     id: "04",
-    title: "Melhor aproveitamento do pasto",
+    title: "Pastagens mais bem aproveitadas",
     description:
-      "Estruture areas, piquetes e sistemas rotacionados para usar o potencial da propriedade com mais eficiencia.",
+      "Melhore o uso do pasto ao longo do ano, com manejo mais eficiente, melhor resposta da área e suporte para decisões mais assertivas.",
     Icon: Leaf,
   },
   {
     id: "05",
-    title: "Acompanhamento tecnico proximo",
+    title: "Acompanhamento técnico de perto",
     description:
-      "Conte com suporte personalizado, linguagem simples e atuacao alinhada a realidade do produtor.",
+      "Conte com uma orientação próxima, prática e contínua para ajustar a operação, acompanhar resultados e evoluir com confiança.",
     Icon: ClipboardCheck,
-    image:
-      "https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: acompanhamentoTecnicoImage,
+    imagePosition: "center center",
   },
   {
     id: "06",
-    title: "Mais controle da operacao",
+    title: "Mais controle da operação",
     description:
-      "Use indicadores e planejamento produtivo para entender melhor custos, desempenho e oportunidades de melhoria.",
+      "Organize melhor sua rotina, acompanhe indicadores com mais clareza e tenha uma gestão mais segura da produção.",
     Icon: Sprout,
   },
 ];
@@ -72,11 +75,10 @@ const WhatWeOffer = () => {
             className="max-w-5xl"
           >
             <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.24em] text-primary">
-              Beneficios
+              Benefícios
             </span>
             <h2 className="max-w-3xl text-3xl font-bold leading-[1.12] text-content-primary md:text-4xl lg:text-[48px]">
-              Ganhos tecnicos que aumentam a eficiencia e a seguranca da sua
-              producao
+              Benefícios da orientação técnica no campo
             </h2>
           </Motion.div>
         </div>
@@ -105,6 +107,7 @@ const WhatWeOffer = () => {
                       src={benefit.image}
                       alt={benefit.title}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      style={{ objectPosition: benefit.imagePosition || "center center" }}
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,8,0.2)_0%,rgba(8,12,8,0.45)_38%,rgba(8,12,8,0.76)_100%)]" />
                   </>

@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import videLogo from "../assets/vide-logo.png";
 
 const navItems = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Beneficios", href: "#servicos" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Produtos", href: "#produtos" },
+  { label: "Início", href: "#inicio" },
+  { label: "Benefícios", href: "#servicos" },
+  { label: "Sobre nós", href: "#sobre" },
+  { label: "Serviços", href: "#produtos" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
+  const useLightLogo = !isScrolled && !isOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,8 +45,12 @@ const Navbar = () => {
           >
             <img
               src={videLogo}
-              alt="Vide Consultoria Agronomica"
-              className="h-14 w-auto sm:h-16 lg:h-[72px]"
+              alt="Vide Consultoria Agronômica"
+              className={`h-14 w-auto transition-all duration-300 sm:h-16 lg:h-[72px] ${
+                useLightLogo
+                  ? "brightness-0 invert drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
+                  : ""
+              }`}
             />
           </a>
 
@@ -76,7 +81,7 @@ const Navbar = () => {
               href="#contato"
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-content-white transition-colors hover:bg-primary-hover"
             >
-              Solicitar orcamento
+              Solicitar orçamento
             </a>
           </div>
 
@@ -116,7 +121,7 @@ const Navbar = () => {
                 className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-content-white transition-colors hover:bg-primary-hover"
                 onClick={closeMenu}
               >
-                Solicitar orcamento
+                Solicitar orçamento
               </a>
             </div>
           </div>

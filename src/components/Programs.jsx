@@ -7,25 +7,25 @@ import isabelaCardialImage from '../assets/isabela-cardial.jpeg';
 const servicesData = [
   {
     title: 'Consultoria\nAgronômica',
-    desc: 'Diagnóstico técnico, orientação prática e acompanhamento alinhado à realidade da propriedade.',
+    desc: 'Diagnóstico técnico e orientações práticas para pastagens, lavouras e rotina produtiva.',
     image: heroBackground,
     imagePosition: 'center 62%',
   },
   {
     title: 'Planejamento\nProdutivo',
-    desc: 'Organização de manejo, tomada de decisão e definição de estratégias para melhorar resultado.',
+    desc: 'Planejamento da propriedade para melhorar resultados, rotina e uso dos recursos.',
     image: isabelaCardialImage,
     imagePosition: 'center 18%',
   },
   {
-    title: 'Manejo de\nPastagens',
-    desc: 'Suporte técnico para uso mais eficiente da área, melhor aproveitamento do pasto e mais equilíbrio no sistema.',
+    title: 'Projetos\nAgronômicos',
+    desc: 'Projetos técnicos para organizar áreas, otimizar manejo e aumentar a eficiência produtiva.',
     image: heroBackground,
     imagePosition: 'center 78%',
   },
   {
     title: 'Projetos\nAmbientais',
-    desc: 'Apoio em demandas ambientais com orientação clara, responsabilidade técnica e visão de campo.',
+    desc: 'Licenciamento ambiental, regularizações, CAR e autorizações para adequação da propriedade.',
     image: isabelaCardialImage,
     imagePosition: 'center 38%',
   },
@@ -44,7 +44,7 @@ const Programs = () => {
           Nossos serviços
         </span>
         <h2 className="text-3xl font-bold leading-tight text-content-primary md:text-4xl lg:text-[48px]">
-          Soluções técnicas para fortalecer a rotina e o resultado no campo
+          Soluções agronômicas e ambientais para sua propriedade
         </h2>
       </Motion.div>
 

@@ -4,29 +4,29 @@ import { motion as Motion } from 'framer-motion';
 
 const testimonialsData = [
   {
-    title: 'Atendimento claro',
-    desc: 'A consultoria trouxe mais segurança para decidir e ajustar a rotina da propriedade.',
-    name: 'Clara Lima',
+    title: 'Diagnóstico técnico',
+    desc: 'Análise da propriedade para orientar decisões mais seguras e mais coerentes com a realidade do campo.',
+    name: 'Clareza na operação',
   },
   {
-    title: 'Mais organização',
-    desc: 'O planejamento ficou mais prático e fácil de aplicar no dia a dia do campo.',
-    name: 'João Almeida',
+    title: 'Planejamento aplicado',
+    desc: 'Organização da rotina produtiva para melhorar o uso dos recursos e dar mais direção à operação.',
+    name: 'Mais eficiência',
   },
   {
-    title: 'Visão técnica',
-    desc: 'As orientações foram objetivas e ajudaram a enxergar melhorias com rapidez.',
-    name: 'Sofia Oliveira',
+    title: 'Orientação prática',
+    desc: 'Recomendações técnicas objetivas para facilitar o manejo, ajustar processos e reduzir desperdícios.',
+    name: 'Decisão no campo',
   },
   {
     title: 'Acompanhamento próximo',
-    desc: 'O suporte foi direto, acessível e alinhado com a realidade da nossa operação.',
-    name: 'Marcos Dias',
+    desc: 'Suporte técnico contínuo para acompanhar resultados, corrigir gargalos e evoluir com confiança.',
+    name: 'Suporte técnico',
   },
   {
-    title: 'Resultado no campo',
-    desc: 'O trabalho trouxe mais confiança para conduzir as ações e melhorar o manejo.',
-    name: 'Olivia Branco',
+    title: 'Visão ambiental',
+    desc: 'Apoio em demandas ambientais com responsabilidade técnica e orientação clara para a propriedade.',
+    name: 'Regularização',
   },
 ];
 
@@ -40,7 +40,7 @@ const Testimonials = () => {
           viewport={{ once: true, margin: '-100px' }}
           className="mb-10 text-center text-3xl font-bold leading-tight text-content-primary md:text-4xl"
         >
-          O que os clientes dizem sobre a Vide
+          Como a Vide fortalece a sua operação
         </Motion.h2>
 
         <div className="flex gap-4 overflow-x-auto pb-2 lg:grid lg:grid-cols-5 lg:overflow-visible">

@@ -7,34 +7,37 @@ const metricsData = [
     Icon: Users,
     title: 'Propriedades acompanhadas',
     description: 'Atendimento técnico com leitura da realidade da fazenda e foco em evolução prática.',
-    value: 35,
+    value: 20,
+    suffix: '+',
   },
   {
     Icon: Leaf,
     title: 'Áreas com manejo orientado',
     description: 'Apoio voltado para uso eficiente do pasto, rotina produtiva e organização do sistema.',
-    value: 18,
+    value: 1500,
+    suffix: 'ha+',
   },
   {
     Icon: CheckCircle,
     title: 'Planos e diagnósticos técnicos',
     description: 'Estratégias construídas para melhorar decisão, execução no campo e resultado do produtor.',
     value: 62,
+    suffix: '+',
   },
   {
     Icon: ClipboardList,
     title: 'Acompanhamentos em campo',
     description: 'Visitas e orientações técnicas realizadas com proximidade, clareza e responsabilidade.',
     value: 120,
+    suffix: '+',
   },
 ];
 
-const CountUp = ({ value, start }) => {
+const CountUp = ({ value, start, suffix = '+' }) => {
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
     if (!start) {
-      setDisplayValue(0);
       return;
     }
 
@@ -58,7 +61,12 @@ const CountUp = ({ value, start }) => {
     return () => cancelAnimationFrame(frameId);
   }, [start, value]);
 
-  return <>{displayValue.toLocaleString('pt-BR')}+</>;
+  return (
+    <>
+      {displayValue.toLocaleString('pt-BR')}
+      {suffix}
+    </>
+  );
 };
 
 const Metrics = () => {
@@ -110,7 +118,7 @@ const Metrics = () => {
               <p className="text-sm leading-6 text-white/62">{item.description}</p>
 
               <div className="mt-auto flex min-h-[56px] items-end pt-5 text-3xl font-bold tracking-tight tabular-nums text-content-white md:text-4xl">
-                <CountUp value={item.value} start={isInView} />
+                <CountUp value={item.value} start={isInView} suffix={item.suffix} />
               </div>
             </Motion.div>
           ))}

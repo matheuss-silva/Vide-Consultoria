@@ -1,111 +1,79 @@
 import React from 'react';
+import videLogo from '../assets/vide-logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-surface-dark text-white/70 py-16 border-t border-white/5">
+    <footer
+      className="border-t border-white/5 bg-surface-dark pt-12 pb-8 text-white/70 md:pt-14 md:pb-10"
+      id="contato"
+    >
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="md:col-span-1">
-            <div className="mb-6">
-              <div className="text-3xl font-semibold text-content-white leading-none">
-                Vide
-              </div>
-              <div className="mt-2 text-xs uppercase tracking-[0.28em] text-primary">
-                Consultoria Agronomica
-              </div>
-            </div>
-            <p className="text-sm leading-relaxed max-w-xs mb-6">
-              Atuacao tecnica voltada para produtividade, planejamento e
-              seguranca nas decisoes do produtor.
+        <div className="mb-8 grid items-start gap-x-10 gap-y-10 md:grid-cols-2 xl:grid-cols-[1.5fr_0.9fr_1fr]">
+          <div className="max-w-md">
+            <a href="#inicio" className="inline-flex items-center">
+              <img
+                src={videLogo}
+                alt="Vide Consultoria Agronômica"
+                className="h-16 w-auto brightness-0 invert md:h-[72px]"
+              />
+            </a>
+
+            <p className="mt-4 text-sm leading-7 text-white/72">
+              Engenharia Agronômica com orientação prática e estratégica para fortalecer a
+              produtividade, a organização da operação e a tomada de decisão no campo.
             </p>
           </div>
 
           <div>
-            <h4 className="text-content-white font-semibold mb-6">
-              Nossos Servicos
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-content-white">
+              Navegação
             </h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="#" className="hover:text-primary transition-colors text-sm">
-                  Gestao de Pastagens
+                <a href="#inicio" className="text-sm transition-colors hover:text-primary">
+                  Início
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors text-sm">
-                  Nutricao Animal
+                <a href="#servicos" className="text-sm transition-colors hover:text-primary">
+                  Benefícios
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors text-sm">
-                  Planejamento Produtivo
+                <a href="#sobre" className="text-sm transition-colors hover:text-primary">
+                  Sobre nós
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors text-sm">
-                  Consultoria Ambiental
+                <a href="#faq" className="text-sm transition-colors hover:text-primary">
+                  Perguntas frequentes
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-content-white font-semibold mb-6">Companhia</h4>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <a
-                  href="#sobre"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  Sobre Nos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#produtos"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  Nossos Produtos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#servicos"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  Programas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contato"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  FAQ e Contato
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-content-white font-semibold mb-6">Contato</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="text-sm">Paraiso do Tocantins e todo o estado</li>
-              <li className="text-sm">Atendimento com acompanhamento tecnico</li>
-              <li className="text-sm">Solicitacoes via contato e WhatsApp</li>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-content-white">
+              Contato
+            </h4>
+            <ul className="flex flex-col gap-3 text-sm leading-7">
+              <li>Paraíso do Tocantins e atendimento em todo o estado</li>
+              <li>Orientação técnica personalizada</li>
+              <li>Solicitações via formulário e WhatsApp</li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">
-            (c) {new Date().getFullYear()} Vide Consultoria Agronomica. Todos os
-            direitos reservados.
+        <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
+          <p className="text-sm text-white/60">
+            © {new Date().getFullYear()} Vide Consultoria Agronômica. Todos os direitos reservados.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-primary transition-colors text-sm">
+
+          <div className="flex gap-5">
+            <a href="#" className="text-sm transition-colors hover:text-primary">
               Privacidade
             </a>
-            <a href="#" className="hover:text-primary transition-colors text-sm">
+            <a href="#" className="text-sm transition-colors hover:text-primary">
               Termos de Uso
             </a>
           </div>

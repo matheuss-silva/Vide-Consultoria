@@ -2,13 +2,13 @@ import React from "react";
 import { motion as Motion } from "framer-motion";
 import heroBackground from "../assets/hero-background.jpg";
 
-const eyebrow = "Atuacao em Paraiso do Tocantins e em todo o estado";
+const eyebrow = "Atuação em Paraíso do Tocantins e em todo o estado";
 
 const title =
-  "Decisoes tecnicas que fortalecem a produtividade e o futuro da sua operacao.";
+  "Decisões técnicas que fortalecem a produtividade e o futuro da sua operação.";
 
 const subtitle =
-  "Da gestao de pastagens e nutricao animal ao planejamento produtivo, projetos agronomicos e consultoria ambiental, a Vide entrega orientacao pratica e estrategica para produtores que querem crescer com seguranca e resultado.";
+  "Da gestão de pastagens e nutrição animal ao planejamento produtivo, projetos agronômicos e consultoria ambiental, a Vide entrega orientação prática e estratégica para produtores que querem crescer com segurança e resultado.";
 
 const Hero = () => {
   return (
@@ -33,28 +33,28 @@ const Hero = () => {
               transition={{ duration: 0.7 }}
               className="max-w-3xl"
             >
-              <p className="mb-5 max-w-2xl text-sm font-medium leading-relaxed text-white/80 md:text-base">
+              <p className="mb-4 max-w-2xl text-xs font-medium leading-relaxed tracking-[0.08em] text-white/80 sm:text-sm md:text-[15px]">
                 {eyebrow}
               </p>
 
-              <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-content-white md:text-5xl lg:text-[58px]">
+              <h1 className="max-w-3xl text-3xl font-bold leading-[1.1] text-content-white sm:text-4xl md:text-[46px] lg:text-[52px]">
                 {title}
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base md:text-[17px]">
                 {subtitle}
               </p>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="#contato"
-                  className="inline-flex min-h-14 items-center justify-center rounded-xl bg-primary px-7 text-sm font-bold uppercase tracking-[0.18em] text-content-white transition-all hover:bg-primary-hover"
+                  className="inline-flex min-h-14 items-center justify-center rounded-xl bg-primary px-7 text-xs font-bold uppercase tracking-[0.18em] text-content-white transition-all hover:bg-primary-hover sm:text-sm"
                 >
-                  Solicitar orcamento
+                  Solicitar orçamento
                 </a>
                 <a
                   href="#contato"
-                  className="inline-flex min-h-14 items-center justify-center rounded-xl border border-white/25 bg-white/10 px-7 text-sm font-bold uppercase tracking-[0.18em] text-content-white backdrop-blur-sm transition-all hover:bg-white/15"
+                  className="inline-flex min-h-14 items-center justify-center rounded-xl border border-white/25 bg-white/10 px-7 text-xs font-bold uppercase tracking-[0.18em] text-content-white backdrop-blur-sm transition-all hover:bg-white/15 sm:text-sm"
                 >
                   Falar no WhatsApp
                 </a>
