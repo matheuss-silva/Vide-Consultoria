@@ -60,6 +60,7 @@ const Footer = () => {
               <li>Paraíso do Tocantins e atendimento em todo o estado</li>
               <li>Orientação técnica personalizada</li>
               <li>Solicitações via formulário e WhatsApp</li>
+              <li>CNPJ: 63.522.509/0001-14</li>
             </ul>
           </div>
         </div>
@@ -69,14 +70,14 @@ const Footer = () => {
             © {new Date().getFullYear()} Vide Consultoria Agronômica. Todos os direitos reservados.
           </p>
 
-          <div className="flex gap-5">
-            <a href="#" className="text-sm transition-colors hover:text-primary">
-              Privacidade
-            </a>
-            <a href="#" className="text-sm transition-colors hover:text-primary">
-              Termos de Uso
-            </a>
-          </div>
+          <a
+            href="https://elevation-digital-jade.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm transition-colors hover:text-primary"
+          >
+            Desenvolvido por Elevation Digital.
+          </a>
         </div>
       </div>
     </footer>
