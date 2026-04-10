@@ -8,7 +8,7 @@ import {
   Sprout,
   TrendingUp,
 } from "lucide-react";
-import maisResultadoPorHectareImage from "../assets/mais-resultado-por-hectare.jpg";
+import maisResultadoPorHectareImage from "../assets/mais-resultado-por-hectare.jpeg";
 import decisoesTecnicasImage from "../assets/decisoes-tecnicas.jpeg";
 import acompanhamentoTecnicoImage from "../assets/acompanhamento-tecnico.jpg";
 
@@ -107,7 +107,10 @@ const WhatWeOffer = () => {
                       src={benefit.image}
                       alt={benefit.title}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{ objectPosition: benefit.imagePosition || "center center" }}
+                      style={{
+                        objectPosition:
+                          benefit.imagePosition || "center center",
+                      }}
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,8,0.2)_0%,rgba(8,12,8,0.45)_38%,rgba(8,12,8,0.76)_100%)]" />
                   </>

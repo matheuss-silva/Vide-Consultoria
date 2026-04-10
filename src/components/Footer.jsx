@@ -1,7 +1,11 @@
-import React from 'react';
-import videLogo from '../assets/vide-logo.png';
+import React from "react";
+import videLogo from "../assets/vide-logo.png";
 
 const Footer = () => {
+  const handlePrivacyClick = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <footer
       className="border-t border-white/5 bg-surface-dark pt-12 pb-8 text-white/70 md:pt-14 md:pb-10"
@@ -19,8 +23,8 @@ const Footer = () => {
             </a>
 
             <p className="mt-4 text-sm leading-7 text-white/72">
-              Engenharia Agronômica com orientação prática e estratégica para fortalecer a
-              produtividade, a organização da operação e a tomada de decisão no campo.
+              Engenharia Agronômica com orientação prática e estratégica para fortalecer
+              a produtividade, a organização da operação e a tomada de decisão no campo.
             </p>
           </div>
 
@@ -67,16 +71,16 @@ const Footer = () => {
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
           <p className="text-sm text-white/60">
-            © {new Date().getFullYear()} Vide Consultoria Agronômica. Todos os direitos reservados.
+            © {new Date().getFullYear()} Vide Consultoria Agronômica. Todos os direitos
+            reservados.
           </p>
 
           <a
-            href="https://elevation-digital-jade.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
+            href="#"
+            onClick={handlePrivacyClick}
             className="text-sm transition-colors hover:text-primary"
           >
-            Desenvolvido por Elevation Digital.
+            Política de Privacidade
           </a>
         </div>
       </div>

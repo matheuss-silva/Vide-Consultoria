@@ -8,6 +8,7 @@ import Programs from "./components/Programs";
 import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Testimonials />
       <Faq />
       <Footer />
+      <CookieBanner />
     </>
   );
 }
