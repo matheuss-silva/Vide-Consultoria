@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-import { motion as Motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion as Motion } from "framer-motion";
+import { Minus, Plus } from "lucide-react";
 import faqImage from "../assets/hero-background.jpg";
+import { fadeInUp, easeOutExpo, staggerContainer, staggerItem, viewportConfig } from "../lib/motion";
 
 const faqData = [
   {
@@ -39,17 +40,11 @@ const Faq = () => {
   };
 
   return (
-    <section
-      id="faq"
-      className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10"
-    >
+    <section id="faq" className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
       <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch lg:gap-12">
         <Motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-[2rem] min-h-[380px] lg:h-full"
+          {...fadeInUp()}
+          className="relative min-h-[380px] overflow-hidden rounded-[2rem] lg:h-full"
         >
           <img
             src={faqImage}
@@ -59,25 +54,18 @@ const Faq = () => {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
 
-          <div className="absolute left-4 right-4 bottom-4 rounded-[1.5rem] border border-white/10 bg-black/45 p-5 text-white backdrop-blur-md sm:left-6 sm:right-6 sm:bottom-6 sm:p-6">
+          <div className="absolute bottom-4 left-4 right-4 rounded-[1.5rem] border border-white/10 bg-black/45 p-5 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-6">
             <span className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.28em] text-primary">
               Atendimento próximo
             </span>
 
             <p className="max-w-sm text-sm leading-6 text-white/90 sm:text-[15px]">
-              Orientação clara, acompanhamento técnico e foco no resultado da
-              propriedade.
+              Orientação clara, acompanhamento técnico e foco no resultado da propriedade.
             </p>
           </div>
         </Motion.div>
 
-        <Motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, delay: 0.08 }}
-          className="flex flex-col justify-center"
-        >
+        <Motion.div {...fadeInUp(0.08)} className="flex flex-col justify-center">
           <span className="mb-3 block text-sm font-semibold uppercase tracking-[0.28em] text-primary">
             Perguntas frequentes
           </span>
@@ -90,13 +78,20 @@ const Faq = () => {
             Respostas rápidas sobre atendimento, áreas acompanhadas e orçamento.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3">
+          <Motion.div
+            variants={staggerContainer(0.07)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportConfig}
+            className="mt-8 flex flex-col gap-3"
+          >
             {faqData.map((item, idx) => {
               const isOpen = openIndex === idx;
 
               return (
-                <div
-                  key={idx}
+                <Motion.div
+                  key={item.question}
+                  variants={staggerItem(18)}
                   className={`overflow-hidden rounded-[1.5rem] border bg-white transition-all duration-300 ${
                     isOpen
                       ? "border-primary/20 shadow-[0_18px_40px_rgba(20,20,20,0.06)]"
@@ -124,7 +119,7 @@ const Faq = () => {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.22, ease: "easeOut" }}
+                        transition={{ duration: 0.24, ease: easeOutExpo }}
                       >
                         <div className="px-5 pb-5 sm:px-6 sm:pb-6">
                           <p className="max-w-[58ch] text-[15px] leading-7 text-content-secondary">
@@ -134,10 +129,10 @@ const Faq = () => {
                       </Motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </Motion.div>
               );
             })}
-          </div>
+          </Motion.div>
         </Motion.div>
       </div>
     </section>

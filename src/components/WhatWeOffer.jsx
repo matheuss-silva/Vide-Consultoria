@@ -8,9 +8,10 @@ import {
   Sprout,
   TrendingUp,
 } from "lucide-react";
-import maisResultadoPorHectareImage from "../assets/mais-resultado-por-hectare.jpeg";
-import decisoesTecnicasImage from "../assets/decisoes-tecnicas.jpeg";
 import acompanhamentoTecnicoImage from "../assets/acompanhamento-tecnico.jpg";
+import decisoesTecnicasImage from "../assets/decisoes-tecnicas.jpeg";
+import maisResultadoPorHectareImage from "../assets/mais-resultado-por-hectare.jpeg";
+import { fadeInUp, staggerContainer, staggerItem, viewportConfig } from "../lib/motion";
 
 const benefits = [
   {
@@ -65,25 +66,26 @@ const benefits = [
 
 const WhatWeOffer = () => {
   return (
-    <section className="py-24" id="servicos">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
-        <div className="mb-14 lg:mb-16">
-          <Motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="max-w-5xl"
-          >
+    <section className="py-20 sm:py-24" id="servicos">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+        <Motion.div {...fadeInUp()} className="mb-12 lg:mb-16">
+          <div className="max-w-5xl">
             <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.24em] text-primary">
               Benefícios
             </span>
             <h2 className="max-w-3xl text-3xl font-bold leading-[1.12] text-content-primary md:text-4xl lg:text-[48px]">
               Benefícios da orientação técnica no campo
             </h2>
-          </Motion.div>
-        </div>
+          </div>
+        </Motion.div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <Motion.div
+          variants={staggerContainer(0.08)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportConfig}
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
+        >
           {benefits.map((benefit, idx) => {
             const isDarkText = idx % 2 === 1;
             const Icon = benefit.Icon;
@@ -91,14 +93,12 @@ const WhatWeOffer = () => {
             return (
               <Motion.article
                 key={benefit.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: 0.08 * idx, duration: 0.45 }}
+                variants={staggerItem(22)}
+                whileHover={{ y: -6 }}
                 className={
                   isDarkText
-                    ? "group min-h-[250px] rounded-[28px] border border-[#dfe9d4] bg-[#edf4e5] p-7 shadow-[0_14px_34px_rgba(70,93,29,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:bg-[#f3f8ee] hover:shadow-[0_24px_60px_rgba(70,93,29,0.12)] lg:p-8"
-                    : "group relative min-h-[250px] overflow-hidden rounded-[28px] border border-border-soft bg-white p-7 shadow-[0_14px_34px_rgba(21,21,21,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-primary/25 hover:shadow-[0_24px_60px_rgba(21,21,21,0.08)] lg:p-8"
+                    ? "group min-h-[250px] rounded-[28px] border border-[#dfe9d4] bg-[#edf4e5] p-7 shadow-[0_14px_34px_rgba(70,93,29,0.06)] transition-all duration-300 hover:border-primary/30 hover:bg-[#f3f8ee] hover:shadow-[0_24px_60px_rgba(70,93,29,0.12)] lg:p-8"
+                    : "group relative min-h-[250px] overflow-hidden rounded-[28px] border border-border-soft bg-white p-7 shadow-[0_14px_34px_rgba(21,21,21,0.04)] transition-all duration-300 hover:border-primary/25 hover:shadow-[0_24px_60px_rgba(21,21,21,0.08)] lg:p-8"
                 }
               >
                 {!isDarkText && benefit.image ? (
@@ -107,12 +107,9 @@ const WhatWeOffer = () => {
                       src={benefit.image}
                       alt={benefit.title}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{
-                        objectPosition:
-                          benefit.imagePosition || "center center",
-                      }}
+                      style={{ objectPosition: benefit.imagePosition || "center center" }}
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,8,0.2)_0%,rgba(8,12,8,0.45)_38%,rgba(8,12,8,0.76)_100%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,8,0.18)_0%,rgba(8,12,8,0.42)_38%,rgba(8,12,8,0.76)_100%)]" />
                   </>
                 ) : null}
 
@@ -163,7 +160,7 @@ const WhatWeOffer = () => {
               </Motion.article>
             );
           })}
-        </div>
+        </Motion.div>
       </div>
     </section>
   );
