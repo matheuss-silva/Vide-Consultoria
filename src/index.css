@@ -31,6 +31,45 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.42) #232323;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #232323;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 3px solid #232323;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.34) 100%);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.44) 100%);
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 14px;
+  background:
+    linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.65) 50%) center 6px / 7px 7px no-repeat,
+    linear-gradient(225deg, transparent 50%, rgba(255, 255, 255, 0.65) 50%) center 6px / 7px 7px no-repeat,
+    #232323;
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 14px;
+  background:
+    linear-gradient(315deg, transparent 50%, rgba(255, 255, 255, 0.65) 50%) center 5px / 7px 7px no-repeat,
+    linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.65) 50%) center 5px / 7px 7px no-repeat,
+    #232323;
+}
+
 @utility texture-bg {
   background-image: radial-gradient(var(--color-border-soft) 1px, transparent 1px);
   background-size: 16px 16px;
