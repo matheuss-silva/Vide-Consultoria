@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroBackground from "../assets/hero-background.jpg";
+import heroSlideCattleRoad from "../assets/hero-slide-cattle-road.jpeg";
+import heroSlideCattleTree from "../assets/hero-slide-cattle-tree.jpeg";
+import heroSlidePasture from "../assets/hero-slide-pasture.jpeg";
 import {
   buildWhatsAppLink,
   WHATSAPP_GENERAL_MESSAGE,
@@ -19,16 +21,16 @@ const subtitle =
 
 const heroSlides = [
   {
-    image: heroBackground,
-    position: "center 60%",
+    image: heroSlideCattleRoad,
+    position: "center 62%",
   },
   {
-    image: heroBackground,
-    position: "center 60%",
+    image: heroSlideCattleTree,
+    position: "center 58%",
   },
   {
-    image: heroBackground,
-    position: "center 60%",
+    image: heroSlidePasture,
+    position: "center 64%",
   },
 ];
 

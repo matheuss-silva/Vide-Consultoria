@@ -1,5 +1,5 @@
-export const WHATSAPP_DISPLAY = "(63) 99278-6181";
-export const WHATSAPP_NUMBER = "556392786181";
+export const WHATSAPP_DISPLAY = "(63) 99292-0181";
+export const WHATSAPP_NUMBER = "556392910181";
 export const WHATSAPP_QUOTE_MESSAGE =
   "Olá! Vim pelo site e quero solicitar um orçamento para os serviços da empresa.";
 export const WHATSAPP_GENERAL_MESSAGE =

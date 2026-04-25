@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
-import faqImage from "../assets/hero-background.jpg";
+import faqImage from "../assets/faq-rural-road.jpeg";
 import {
   fadeInUp,
   easeOutExpo,
@@ -57,8 +57,8 @@ const Faq = () => {
         >
           <img
             src={faqImage}
-            alt="Paisagem rural com rebanho em área de pastagem"
-            className="h-full w-full object-cover"
+            alt="Estrada rural ao pôr do sol entre cercas e árvores"
+            className="h-full w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
