@@ -14,17 +14,17 @@ const faqData = [
   {
     question: "Como funciona a consultoria?",
     answer:
-      "O atendimento começa com a análise da propriedade, definição das prioridades e organização de um plano técnico com orientações práticas para o campo.",
+      "Nosso atendimento começa com um diagnóstico produtivo da propriedade, identificando a realidade atual da produção, os desafios enfrentados e as oportunidades de melhoria. Em seguida, conversamos com o produtor para entender seus objetivos, sua forma de trabalho e a realidade financeira da propriedade. Com base nessas informações, elaboramos um planejamento estratégico personalizado, definindo as ações, prazos e atividades necessárias para alcançar melhores resultados no campo.",
   },
   {
     question: "Vocês atendem fora de Paraíso?",
     answer:
-      "Sim. A base está em Paraíso do Tocantins, mas o atendimento pode ser realizado em outras regiões conforme a necessidade de acompanhamento.",
+      "Sim, nossa base está localizada em Paraíso do Tocantins, mas atendemos toda a região do Vale do Araguaia, oferecendo suporte personalizado para produtores de diversas localidades.",
   },
   {
     question: "Quais áreas vocês acompanham?",
     answer:
-      "A consultoria atua com manejo de pastagens, planejamento produtivo, orientação técnica no campo e apoio em demandas ambientais.",
+      "Atuamos com soluções completas para o agronegócio, unindo produtividade e sustentabilidade. Na área agronômica, auxiliamos desde o manejo de pastagens e planejamento produtivo até a resolução dos desafios diários no campo. No setor ambiental, garantimos a segurança da sua fazenda através do diagnóstico da propriedade, regularização do CAR e licenciamento ambiental. Além disso, desenvolvemos projetos personalizados para instalação de sistemas rotacionados, cercas elétricas, manejo nutricional e gestão eficiente do seu negócio rural.",
   },
   {
     question: "Atendem pequenos produtores?",
@@ -69,7 +69,8 @@ const Faq = () => {
             </span>
 
             <p className="max-w-sm text-[15px] leading-6 text-white/90">
-              Orientação clara, acompanhamento técnico e foco no resultado da propriedade.
+              Orientação clara, acompanhamento técnico e foco no resultado da
+              propriedade.
             </p>
           </div>
         </Motion.div>

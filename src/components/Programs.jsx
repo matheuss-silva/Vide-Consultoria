@@ -1,12 +1,17 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import consultoriaAgronomicaImage from "../assets/consultoria-agronomica-atual.png";
+import consultoriaAgronomicaImage from "../assets/consultoria-agronomica-atual.jpeg";
 import planejamentoProdutivoImage from "../assets/planejamento-produtivo.png";
-import projetosAgronomicosImage from "../assets/projetos-agronomicos.png";
-import projetosAmbientaisImage from "../assets/projetos-ambientais.png";
+import projetosAgronomicosImage from "../assets/projetos-agronomicos.jpeg";
+import projetosAmbientaisImage from "../assets/projetos-ambientais.jpeg";
 import { buildWhatsAppLink } from "../lib/contact";
-import { fadeInUp, staggerContainer, staggerItem, viewportConfig } from "../lib/motion";
+import {
+  fadeInUp,
+  staggerContainer,
+  staggerItem,
+  viewportConfig,
+} from "../lib/motion";
 
 const servicesData = [
   {
@@ -99,7 +104,9 @@ const Programs = () => {
                 <div className="mb-4 sm:mb-5">
                   <h3 className="text-[24px] font-bold leading-[1.08] text-white drop-shadow-sm sm:text-[28px]">
                     <span className="sm:hidden">{service.mobileTitle}</span>
-                    <span className="hidden whitespace-pre-line sm:inline">{service.title}</span>
+                    <span className="hidden whitespace-pre-line sm:inline">
+                      {service.title}
+                    </span>
                   </h3>
                   <p className="mt-3 max-w-[30ch] text-sm leading-5 text-white/84 sm:max-w-[24ch] sm:leading-6">
                     {service.desc}
