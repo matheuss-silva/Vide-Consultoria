@@ -58,6 +58,8 @@ const Faq = () => {
           <img
             src={faqImage}
             alt="Estrada rural ao pôr do sol entre cercas e árvores"
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover object-center"
           />
 

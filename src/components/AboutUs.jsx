@@ -62,6 +62,8 @@ const AboutUs = () => {
             style={{ objectPosition: "center 14%" }}
             src={isabelaCardialImage}
             alt="Isabela Cardial em área de cultivo"
+            loading="lazy"
+            decoding="async"
           />
         </Motion.div>
       </div>

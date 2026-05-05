@@ -111,6 +111,9 @@ const WhatWeOffer = () => {
                     <img
                       src={benefit.image}
                       alt={benefit.title}
+                      loading="lazy"
+                      decoding="async"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       style={{
                         objectPosition:

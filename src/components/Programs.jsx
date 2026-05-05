@@ -94,6 +94,7 @@ const Programs = () => {
                 src={service.image}
                 alt={service.mobileTitle}
                 loading="lazy"
+                decoding="async"
                 sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 style={{ objectPosition: service.imagePosition }}
