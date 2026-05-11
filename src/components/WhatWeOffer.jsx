@@ -46,7 +46,7 @@ const benefits = [
   },
   {
     id: "04",
-    title: "Pastagens mais bem aproveitadas",
+    title: "Melhor aproveitamento das pastagens",
     description:
       "Melhore o uso do pasto ao longo do ano, com manejo mais eficiente, melhor resposta da área e suporte para decisões mais assertivas.",
     Icon: Leaf,
